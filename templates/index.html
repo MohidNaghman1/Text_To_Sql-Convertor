@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text to SQL Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Rubik', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #8360c3, #2ebf91);
+            color: #fff;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 80px auto;
+            background-color: #1e1e2f;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #ffffff;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        input[type="text"] {
+            padding: 14px;
+            border-radius: 10px;
+            border: none;
+            font-size: 16px;
+            outline: none;
+            background: #2c2c3e;
+            color: #fff;
+        }
+
+        input[type="submit"] {
+            background: linear-gradient(to right, #ff416c, #ff4b2b);
+            color: white;
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background: linear-gradient(to right, #ff4b2b, #ff416c);
+        }
+
+        .result {
+            margin-top: 30px;
+            background: #2c2c3e;
+            padding: 20px;
+            border-radius: 10px;
+            font-family: monospace;
+            font-size: 16px;
+            white-space: pre-wrap;
+            color: #8ef6e4;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧠 Text-to-SQL Generator</h1>
+        <form method="POST">
+            <input type="text" name="question" placeholder="Write your question in plain English..." required>
+            <input type="submit" value="🔍 Generate SQL">
+        </form>
+
+        {% if sql_query %}
+        <div class="result">
+            <strong>🧾 Your Question:</strong><br>{{ question }}<br><br>
+            <strong>📝 Generated SQL:</strong><br>{{ sql_query }}
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="footer">
+        Built with ❤️ using Flask + Transformers
+    </div>
+</body>
+</html>
