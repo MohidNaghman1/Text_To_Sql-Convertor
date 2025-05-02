@@ -1,5 +1,11 @@
 # Text-to-SQL Generator
 
+![WhatsApp Image 2025-05-02 at 05 06 49_4e05a796](https://github.com/user-attachments/assets/9b331998-ad32-45c3-8184-b776e96d9623)
+![WhatsApp Image 2025-05-02 at 05 08 02_0e9f2068](https://github.com/user-attachments/assets/5188e2cd-430c-4e24-bf51-6a3b70dc24ab)
+
+
+
+
 ## How to Run the App
 
 1. **Clone this repository**:
